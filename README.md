@@ -1,5 +1,7 @@
 # Transmitter
 
+🌐 **Русский** · [English](README.en.md) · [Deutsch](README.de.md) · [中文](README.zh.md)
+
 **Сообщения, ссылки и файлы между своими устройствами — без регистрации, без
 чужих серверов, со сквозным шифрованием.**
 
@@ -141,9 +143,10 @@
 
 - Google Drive и OneDrive, затем MEGA;
 - имена устройств и уведомления о новых сообщениях;
+- версия для iPhone;
 - просмотр фото, аудио и видео прямо в приложении.
 
 ---
 
 <sub>Для разработчиков: устройство приложения, сборка и выпуск релизов —
-в [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).</sub>
+в [docs/DEVELOPMENT.md](https://github.com/Kernien/Transmitter/blob/main/docs/DEVELOPMENT.md).</sub>
