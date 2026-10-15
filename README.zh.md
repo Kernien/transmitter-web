@@ -13,7 +13,7 @@
 | 🐧 **Linux** | AppImage——单个文件，无需安装；已在 Steam Deck 上测试 |
 | 🌐 **浏览器** | https://kernien.github.io/transmitter-web/ ——无需安装 |
 
-版本 **0.5.1**。
+版本 **0.6.0**。
 
 > **界面语言。** 应用界面有英语和俄语；在中文系统上显示为英语（可用 🌐 按钮切换）。本指南中的按钮名称先给出中文，括号内是应用中实际显示的英文，例如 **新建密钥**（“New key”）。
 
@@ -32,6 +32,7 @@
 - **双向“分享”（Android）。** 从浏览器、相册或任意应用直接发送到 Transmitter，也可以从 Transmitter 分享到任意应用。
 - **多个库。** 例如一个用于“个人资料 ↔ 工作资料”，另一个用于与电脑交换：每个库都有自己的密钥，互不干扰。
 - **批量处理条目。** 选中多条后，可打包成一个 zip 下载、分享或删除。
+- **条目备注。** 为链接或文件添加说明（是什么、有什么用），可在任意设备上修改或删除。
 - **在所有设备上删除。** 删除的条目会从所有设备上消失，云盘中的文件也一并删除。
 - **设备名称。** 每个条目都显示来源设备：“Redmi 10”、“Redmi 10 · work”、“笔记本”。
 - **英语和俄语界面。** 语言跟随系统，或在应用中选择。
@@ -51,27 +52,27 @@
 ### Android
 
 1. 从 [**Releases**](https://github.com/Kernien/Transmitter/releases) 下载 APK：
-   - `Transmitter-0.5.1-android-arm64.apk` ——适用于近几年的大多数手机；
-   - `Transmitter-0.5.1-android-armv7.apk` ——适用于较旧或入门级机型（如果第一个无法安装）。
+   - `Transmitter-0.6.0-android-arm64.apk` ——适用于近几年的大多数手机；
+   - `Transmitter-0.6.0-android-armv7.apk` ——适用于较旧或入门级机型（如果第一个无法安装）。
 2. 在手机上打开该文件。Android 会询问是否允许从此来源（浏览器或文件管理器）安装——请允许。
 
 **工作资料（Shelter）。** 先在个人资料中安装 Transmitter，然后在 Shelter 中选中它，点击 **克隆到工作资料**。在工作资料中登录云盘也需要浏览器——请把浏览器一并克隆过去。
 
 ### Windows
 
-1. 从 [**Releases**](https://github.com/Kernien/Transmitter/releases) 下载 `Transmitter-0.5.1-windows-setup.exe` 并运行。它只为当前用户安装（无需管理员权限），并在开始菜单中添加 Transmitter。可在 **设置 → 应用** 中卸载；密钥和云盘登录状态会保留。
+1. 从 [**Releases**](https://github.com/Kernien/Transmitter/releases) 下载 `Transmitter-0.6.0-windows-setup.exe` 并运行。它只为当前用户安装（无需管理员权限），并在开始菜单中添加 Transmitter。可在 **设置 → 应用** 中卸载；密钥和云盘登录状态会保留。
 2. 首次启动时，Windows 可能提示“Windows 已保护你的电脑”——因为应用没有付费的代码签名证书。点击 **更多信息 → 仍要运行**。
 
-不想安装？`Transmitter-0.5.1-windows-x64.zip` 是便携版：解压到任意位置，运行 `transmitter.exe` 即可。
+不想安装？`Transmitter-0.6.0-windows-x64.zip` 是便携版：解压到任意位置，运行 `transmitter.exe` 即可。
 
 ### Linux 和 Steam Deck
 
-1. 从 [**Releases**](https://github.com/Kernien/Transmitter/releases) 下载 `Transmitter-0.5.1-linux-x86_64.AppImage`。
+1. 从 [**Releases**](https://github.com/Kernien/Transmitter/releases) 下载 `Transmitter-0.6.0-linux-x86_64.AppImage`。
 2. 将文件设为可执行：在文件管理器中右键 → **属性 → 权限 → 可执行**（或运行 `chmod +x Transmitter-*.AppImage`），然后启动。
 
 **Steam Deck：** 以上操作在桌面模式下进行（Steam 键 → 电源 → 切换到桌面）。若想在游戏模式中也能启动 Transmitter，右键点击文件 → **添加到 Steam**，它会出现在库中的非 Steam 游戏里。
 
-Linux 版没有二维码扫描器——请以字符串形式粘贴密钥。密钥和云盘登录信息保存在 `~/.local/share/app.transmitter.transmitter`（仅当前用户可访问）。另有 `Transmitter-0.5.1-linux-x64.tar.gz`：解压后运行 `transmitter` 即可。
+Linux 版没有二维码扫描器——请以字符串形式粘贴密钥。密钥和云盘登录信息保存在 `~/.local/share/app.transmitter.transmitter`（仅当前用户可访问）。另有 `Transmitter-0.6.0-linux-x64.tar.gz`：解压后运行 `transmitter` 即可。
 
 ### 浏览器
 
@@ -107,7 +108,7 @@ Linux 版没有二维码扫描器——请以字符串形式粘贴密钥。密�
 
 ### 4. 管理条目
 
-- **条目旁的 ⋮：** **分享**（“Share”）、**保存文件**（“Save file”）、**复制文本**（“Copy text”——链接或说明）、**在所有设备上删除**（“Delete on all devices”）。
+- **条目旁的 ⋮：** **添加备注**（“Add comment”，之后为“Edit comment”）、**分享**（“Share”）、**保存文件**（“Save file”）、**复制文本**（“Copy text”——链接或说明）、**在所有设备上删除**（“Delete on all devices”）。
 - **轻点** 链接即可打开，轻点文件即可保存。
 - **长按**（或在 ⋮ 菜单中选择 **选择**“Select”）进入多选模式。勾选多条后，在顶部选择：**下载**（一个 zip 压缩包；链接和说明保存在 `items.txt` 中）、**分享** 或 **删除**。
 - **标题栏的 ⋮ → 清空列表**（“Clear feed”）会在所有设备上删除该库中的全部内容。
@@ -139,9 +140,9 @@ Linux 版没有二维码扫描器——请以字符串形式粘贴密钥。密�
 
 ## 后续计划
 
+- 在应用内直接查看照片、播放音频和视频；
 - MEGA 云盘；
-- iPhone 版本；
-- 在应用内直接查看照片、播放音频和视频。
+- iPhone 版本。
 
 ---
 
